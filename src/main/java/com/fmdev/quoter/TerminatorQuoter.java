@@ -26,4 +26,8 @@ public class TerminatorQuoter implements Quoter {
     public TerminatorQuoter() {
         sayQuote();
     }
+
+    public void setRepeat(int repeat) {
+        this.repeat = repeat;
+    }
 }
