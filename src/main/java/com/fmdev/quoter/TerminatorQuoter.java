@@ -1,9 +1,11 @@
 package com.fmdev.quoter;
 
+import com.fmdev.quoter.annotation.DeprecatedClass;
 import com.fmdev.quoter.annotation.InjectRandomInt;
 import com.fmdev.quoter.annotation.Transactional;
 
 @Transactional
+@DeprecatedClass(newImpl = T1000.class)
 public class TerminatorQuoter implements Quoter {
     @InjectRandomInt(min=3, max=10)
     private int repeat;
