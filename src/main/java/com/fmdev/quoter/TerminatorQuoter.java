@@ -1,7 +1,9 @@
 package com.fmdev.quoter;
 
 import com.fmdev.quoter.annotation.InjectRandomInt;
+import com.fmdev.quoter.annotation.Transactional;
 
+@Transactional
 public class TerminatorQuoter implements Quoter {
     @InjectRandomInt(min=3, max=10)
     private int repeat;
