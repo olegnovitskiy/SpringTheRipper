@@ -1,6 +1,10 @@
 package com.fmdev.quoter;
 
+import com.fmdev.quoter.annotation.InjectRandomInt;
+
 public class TerminatorQuoter implements Quoter {
+    @InjectRandomInt(min=3, max=10)
+    private int repeat;
     private String message;
 
     public void setMessage(String message) {
@@ -8,6 +12,8 @@ public class TerminatorQuoter implements Quoter {
     }
 
     public void sayQuote() {
-        System.out.println("message = " + message);
+        for (int i = 0; i < repeat; i++) {
+            System.out.println("message = " + message);
+        }
     }
 }
